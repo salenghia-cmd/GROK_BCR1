@@ -229,9 +229,9 @@ dependencies {
     // Coroutines (khuyên dùng ngay từ đầu để RealtimeBridgeService sạch sẽ hơn)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")  // hoặc 1.8.1 nếu muốn ổn định hơn
 
-    // Lifecycle cho Service (giúp observe lifecycle-aware nếu cần sau này)
-    implementation("androidx.lifecycle:lifecycle-service:2.8.8")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.8")
+   val lifecycleVersion = "2.8.0"  // hoặc nâng lên "2.10.0" nếu muốn mới nhất
+    implementation("androidx.lifecycle:lifecycle-service:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
 
     // Test (giữ nguyên)
     testImplementation(libs.junit)
